@@ -11,8 +11,8 @@ int main() {
 
 	while(M--) {
         cin >> x >> y;
-        if (set > x) set = x;
-        if (single > y) single = y;
+        set = min(set, x);
+        single = min(single, y);
 	}
 	cout << min((N/6+1)*set, min(N/6*set + N%6*single, N*single)) << '\n';
 }

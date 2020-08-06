@@ -25,5 +25,5 @@ int main() {
         }
     }
     
-    cout << arr[input] << "\n";
+    cout << arr[input] << "\n" << endl;
 }

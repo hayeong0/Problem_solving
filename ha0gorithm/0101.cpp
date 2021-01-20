@@ -11,4 +11,5 @@ int main() {
         if (i % M == 0) sum += i;
     }
     cout << sum << endl;
+    
 }

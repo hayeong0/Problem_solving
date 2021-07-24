@@ -7,5 +7,4 @@ for _ in range(int(input())):
     if floor == 0:      
         num = n//h 
         floor = h
-
     print(f'{floor*100+num}')

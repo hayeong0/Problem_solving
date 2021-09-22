@@ -17,8 +17,9 @@ int edmonds(int start, int end) {
 	
 	while (1) { 
 		int f = 999999999;
+
 		queue<int> q;
-        vector<int> flag(N+1, -1);
+       		vector<int> flag(N+1, -1);
 		q.push(start);
 
 		while (!q.empty()) {
@@ -34,11 +35,11 @@ int edmonds(int start, int end) {
 				}
 			}
 		}
-		
 		if (flag[end] == -1) break;
+		
 		for (int i = end; i != start; i = flag[i]) {
-            f = min(f, capacity[flag[i]][i] - flow[flag[i]][i]);
-        }
+            		f = min(f, capacity[flag[i]][i] - flow[flag[i]][i]);
+        	}
 		for (int i = end; i!=start; i = flag[i]) {
 			flow[flag[i]][i] += f;
 			flow[i][flag[i]] -= f;
